@@ -16,10 +16,7 @@ async def get_auth():
 
 @auth_router.post("/create_user")
 async def create_user(
-    email: str,
-    password: str,
-    name: str,
-    session=Depends(get_session),
+    email: str, password: str, name: str, session=Depends(get_session)
 ):
     """Rota para criar um usuário"""
 
